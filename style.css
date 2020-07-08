@@ -1,17 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
+
 html{
     background: url('./img/background.png');
     background-size: cover;
     width: 100%;
     height: 100%;
 }
+header{
+    background:rgb(209, 209, 54);
+    background-image: linear-gradient(yellow, lightgreen);
+    font-family: "Russo One", "sans-serif";
+    color: lightblue;
+    padding:20px;
+    text-align: center;
+    border-bottom: 2px green solid;
+    margin: 10px;
+    word-spacing: 3px;
+    letter-spacing: 5px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    opacity: 0.85;
+    background-size: cover;
+    
+}
+
+body{
+    font-family: 'Catamaran', sans-serif;
+}
+.image{
+    display: flex;
+    margin: auto;
+    background-size: cover;
+    margin: 10px;
+    height: 200px;
+    background-image: url("fitness-banner.jpg");
+    font-family: "Russo One", "sans-serif";
+    color: lightblue;
+    text-shadow: 2px 2px black;
+    letter-spacing: 1.5px;
+    justify-content: center;
+}
+.container {
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    margin: auto;
+    /* max-width: 1000px; */
+    /* height: 600px */
+    justify-content: center;
+}
+.field{
+    background-color: lightgray;
+    border-radius: 20px;
+    text-align: center;
+    margin: 10px;
+}
+.field legend{
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    /* text-shadow: 2px 2px black; */
+}
+.search-div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.calendar{
+    margin: 10px;
+    border-radius: 20px;
+}
+.random{
+    background-color: lightgray;
+    min-width: 200px;
+    max-width: 500px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 20px;
+    border: black solid;
+    border-width: thin ;
+    
+}
+.random p{
+    margin-top: 20px;
+}
+.nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2d3135;
+    opacity: .9;
+    padding-top: 60px;
+    transition: 0.7s;
+    overflow: hidden;
+}
+.nav ul{
+    padding: 0;
+}
+.nav li:hover{
+    border-left: 9px solid #3e84c1;
+    background-color: #34383d;
+}
+.nav a{
+    display: block;
+    padding: 20px 30px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 25px;
+}
+.nav a:hover{
+    color: #fff;
+    transition: .5s;
+}
+.nav .close{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 30px;
+
+    margin-left: 20px;
+}
+.slide a {
+    font-size: 36px;
+    color: #2d3135;
+}
+.heading .content {
+    padding: 20px;
+    transition:  margin-left .7s;
+    position: absolute;
+    margin-right: 100px;
+}
+
+/* Event cards */
 .hidden{
     display: none;
 }
 .event-card{
     display: flex;
-    margin: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 10px;
     border: solid black;
-    min-width: 550px;
+    min-width: 350px;
+    background: white;
+    background-size: cover;
 }
 .img-div img{
     max-height: 100px;
@@ -25,11 +165,19 @@ html{
 }
 .top-info{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 10px;
 }
 .bottom-info{
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     padding: 10px;
+}
+/* Event cards */
+.next-div{
+    margin: auto;
+    text-align: center;
+    position: relative;
 }
