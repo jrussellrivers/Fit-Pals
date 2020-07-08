@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit Pals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<style>
+    /* hamburger menu */
+body{
+    font-family: 'Catamaran', sans-serif;
+}
+.nav{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #2d3135;
+    opacity: .9;
+    padding-top: 60px;
+    transition: 0.7s;
+    overflow: hidden;
+}
+.nav ul{
+    padding: 0;
+}
+.nav li:hover{
+    border-left: 9px solid #3e84c1;
+    background-color: #34383d;
+}
+.nav a{
+    display: block;
+    padding: 20px 30px;
+    color: #ccc;
+    text-decoration: none;
+    font-size: 25px;
+}
+.nav a:hover{
+    color: #fff;
+    transition: .5s;
+}
+.nav .close{
+    position: absolute;
+    top: 0;
+    right: 22px;
+    font-size: 30px;
+
+    margin-left: 20px;
+}
+.slide a {
+    font-size: 36px;
+    color: #2d3135;
+}
+.content {
+    padding: 20px;
+    transition:  margin-left .7s;
+}
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+/* greeting and time display */
+        *{
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    .greetTime{
+        font-family: 'Catamaran', sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: 50vh;
+        color: black;
+    }
+    #time{
+        font-size: 8rem;
+    }
+    h1{
+        margin-bottom: 3rem;
+    }
+    h2{
+        margin-bottom: 0.5rem;
+        opacity: 0.6;
+    }
+    @media(max-width: 700px;){
+        #time{
+            font-size: 4rem;
+        }
+    }
+</style>
+<body>
+    <!----------- slider menu -------------------->
+    <div id="content">
+        <span class="slide">
+            <img onclick="openSlideMenu()"
+            src="https://img.icons8.com/color/48/000000/menu.png"/><i class="fas"></i>
+        </a>
+
+        </span>
+        <div id="menu" class="nav">
+            <img class="close" onclick="cloesSlideMenu()" 
+            src="https://img.icons8.com/material-two-tone/24/000000/x-coordinate.png"/>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="search.html" >Events</a></li>
+                <li><a href="#">Sports Randomizer</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <h1>Fit Pals</h1>
+
+    
+
+    <h2 class="home"></h2>
+<!------------ home and time ----------------->
+    <div class="greetTime"> 
+    <time id="time"></time>
+    <h1>
+        <span id="greeting"></span>
+        <span id="name"></span>
+    </h1>
+
+    <h2>What Events are you looking for today?</h2>
+    <h2 id="focus" contenteditable="true">Fitness Events Near Me</h2>
+    <p class="descr">In a time where people are stuck indoors and eager
+        to get out and interact, yet there are restrictions on doing so. Fit Pals
+        gives you that opportunity to look up events in your area and allow you 
+        to dictate the level of comfortablility that you want so that you may go
+        out and interact and still be in a safe environment.
+    </p>
+</div>
+
+<!---------------- javascript--------- -->
+    <script>
+//open and close slider menu
+function openSlideMenu(){
+    document.getElementById('menu').style.width='150px';
+    document.getElementById('content').style.marginLeft='150px'
+}
+function cloesSlideMenu(){
+    document.getElementById('menu').style.width='0';
+    document.getElementById('content').style.marginLeft= '0'
+}
+// --------------greeting and time display------------
+const time = document.getElementById('time'),
+    greeting = document.getElementById('greeting'),
+    name = document.getElementById('name'),
+    focus = document.getElementById('focus')
+
+    // show am or pm
+    const showAmPm = true;
+
+    //show time
+    function showTime() {
+        let today = new Date(),
+        hour = today.getHours(),
+        min = today.getMinutes(),
+        sec = today.getSeconds();
+
+    //AM or PM
+    const amPm = hour >= 12 ? 'PM' : 'AM';
+
+    // 12 hr format
+    hour = hour % 12 || 12;
+
+    //output time
+    time.innerHTML = `${hour}<span>:</span>${addZero(min)}<span>:</span>${addZero(
+    sec
+  )} ${showAmPm ? amPm : ''}`;
+
+
+    setTimeout(showTime, 1000)
+    }
+
+    //add zero
+    function addZero(n){
+        return (parseInt(n,10) < 10 ? '0' : '') + n;
+    }
+    //set greeting
+    function setBgGreet(){
+        let today = new Date(),
+        hour= today.getHours();
+
+        if(hour < 12){
+            //morning
+            greeting.textContent = 'Good Morning!'
+        }else if(hour < 18){
+            //afternoon
+            greeting.textContent = 'Good Afternoon!'
+
+        }else{
+            //night
+            greeting.textContent = 'Good Evening!'
+
+        }
+    }
+    //run
+    showTime();
+    //greeting
+    setBgGreet();
+
+    </script>
+    <br>
+    <a href="https://icons8.com/icon/12371/menu"></a>
+</body>
+</html>
