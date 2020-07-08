@@ -1,36 +1,48 @@
 import {activeKey, proxy} from "../config.js";
 
-let inpActivity = 'running'
-let inpRadius = 25
-
-let year = '2020'
-let month = '07'
-let day = '6'
+console.log('beginning of code')
 
 let page = 1
 
-let inpDate = `${year}-${month}-${day}..`
+let submitSearch = document.getElementById('Search')
+submitSearch.addEventListener('click', ()=>{
+    let inpActivity = document.getElementById('inpActivity').value
+    let inpRadius = document.getElementById('inpRadius').value
+    let inpDate = document.getElementById('inpDate').value
+    let continuousDate = inpDate + '..'
+    page = 1
+
+    return startSearch(inpActivity, page, continuousDate, inpRadius)
+})
 
 function startSearch(activity, page, date, radius){
-    // clearPage()
-    let storedPage = storePage(activity, page, date, radius)
-    fillPage(storedPage)
+    clearPage()
+    console.log('Starting page is '+page)
+    storePage(activity, page, date, radius)
+    // fillPage(storedPage)
 }
 
-// function nextPage(activity, page, date, radius){
-//     // clearPage()
-//     page = page + 1
-//     let storedPage = storePage(activity, page, date, radius)
-//     fillPage(storedPage)
-// }
+function nextPage(activity, newPage, date, radius){
+    console.log('Next page function ran')
+    console.log('newPage is ' + newPage)
+    clearPage()
+    storePage(activity, newPage, date, radius)
+    // fillPage(storedPage)
+}
 
 function storePage(activity, page, date, radius){
-    fetch(`${proxy}http://api.amp.active.com/v2/search?query=${activity}&current_page=${page}&category=event&near=Atlanta,GA,US&start_date=${date}&radius=${radius}&api_key=${activeKey}`)
+    console.log(`${proxy}http://api.amp.active.com/v2/search?query=${activity}&current_page=${page}&category=event&near=Atlanta,GA,US&start_date=${date}&radius=${radius}&api_key=${activeKey}`)
+    fetch(`${proxy}http://api.amp.active.com/v2/search?query=${activity}&current_page=${page}&category=event&near=Atlanta,GA,US&start_date=${date}&radius=${radius}&api_key=${activeKey}`, {
+        // headers:{Origin:'http://www.active.com'}
+    })
     .then(resp=>resp.json())
-    .then(json=>localStorage.setItem('events',JSON.stringify(json.results)))
+    .then(json=>{
+        // localStorage.setItem('events',JSON.stringify(json.results))
+        fillPage(json.results)
+    })
 
-    let storedPage = JSON.parse(localStorage.getItem('events'))
-    return storedPage
+    // let storedPage = JSON.parse(localStorage.getItem('events'))
+    // return storedPage
 }
 
 function fillPage(storedPage){
@@ -106,5 +118,21 @@ function checkImage(img) {
     };
 }
 
-startSearch(inpActivity, page, inpDate, inpRadius)
-// nextPage(inpActivity, page, inpDate, inpRadius)
+function clearPage() {
+    let clearPage = document.getElementById('page');
+    while ( clearPage.firstChild ) clearPage.removeChild( clearPage.firstChild );
+}
+
+let nextButton = document.getElementById('next')
+nextButton.addEventListener('click', ()=>{
+    console.log('page before is ' + page)
+    page += 1
+    console.log('page after is ' + page)
+
+    let inpActivity = document.getElementById('inpActivity').value
+    let inpRadius = document.getElementById('inpRadius').value
+    let inpDate = document.getElementById('inpDate').value
+    let continuousDate = inpDate + '..'
+
+    nextPage(inpActivity, page, continuousDate, inpRadius)
+})
