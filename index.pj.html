@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Pals</title>
+    <link href="https://fonts.googleapis.com/css2?family=Catamaran:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" 
+      type="image/png" 
+      href="favicon-32x32.png">
+</head>
+<body>
+    <header class="heading">
+        <div id="content">
+            <span class="slide">
+                <img onclick="openSlideMenu()"
+                src="https://img.icons8.com/color/48/000000/menu.png"/>            <i class="fas"></i>
+            </a>
+    
+            </span>
+            <div id="menu" class="nav">
+                <img class="close" onclick="cloesSlideMenu()" 
+                src="https://img.icons8.com/material-two-tone/24/000000/x-coordinate.png"/>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="search.html" >Events</a></li>
+                    <li><a href="#">Connect</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            <h2>Home</h2>
+        </div>
+        <div class="opener">
+            <h1>FITNESS PALS</h1>
+        </div>
+    </header>
+       
+      
+    <!----------- slider menu -------------------->
+
+    <div class="image">Virtual Training & Events Available</div>
+    <div class="container">
+        <form>
+            <fieldset class="field">
+            <legend>Event Search</legend>
+            <p>
+                <label for="search"> Category </label>
+                <input type="search" name="category" id="category"  placeholder="Running, 5k, etc."/>
+            </p>
+            <p>
+                <label for="search"> City/Metro </label>
+                <input type="search" name="address" id="address" placeholder="Atlanta"/>
+            </p>
+            <p>
+                <h4>What radius</h4>
+                <label for="search"> <input type="checkbox" checked /> 25 miles </label>
+            </p>
+            <p>
+                <label for="search"> <input type="checkbox" /> 50 miles </label>
+            </p>
+            <input type="submit" id="submit-button" value="Submit" />
+            </fieldset>
+        </form>
+        <div class="calendar">
+            <iframe src="https://calendar.google.com/calendar/embed?src=90q1rv52ld4b0hbpf3ip8m1gig%40group.calendar.google.com&ctz=America%2FNew_York" height = "274" width = "400" style="border: 0" frameborder="0" scrolling="no"></iframe>
+        </div>
+        <div class="random">
+            <label for="random">Don't Know What to Choose? Let's Help You!</label>
+            <input type="submit" id="submit-button" value="Randomizer"/>
+            <p>At Fitness Pals we pride ourselves on getting the party moving. Simply press the "Randomizer" Button to reveal a random event in your area.</p>
+            <p>Search  |  Connect |  Be Healthy</p>
+            <img class="team" alt="" src="teammate.png" height="75" width="75">
+        </div>
+    </div>
+
+<!------------ home and description ----------------->
+
+
+
+
+    <script>
+function openSlideMenu(){
+    document.getElementById('menu').style.width='250px';
+    document.getElementById('content').style.marginLeft='250px'
+}
+function cloesSlideMenu(){
+    document.getElementById('menu').style.width='0';
+    document.getElementById('content').style.marginLeft= '0'
+}
+
+    </script>
+    <script src="./src/main.js"></script>
+    <br>
+    <a href="https://icons8.com/icon/12371/menu"></a>
+</body>
+</html>
