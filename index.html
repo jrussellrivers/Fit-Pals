@@ -15,13 +15,13 @@
         <div class="top-menu-left">
             <div id="content">
                 <span class="slide">
-                    <img onclick="openSlideMenu()"
+                    <img id="menu-open" 
                     src="https://img.icons8.com/color/48/000000/menu.png"/>            <i class="fas"></i>
                 </a>
         
                 </span>
                 <div id="menu" class="nav">
-                    <img class="close" onclick="cloesSlideMenu()" 
+                    <img class="close" id="menu-close" 
                     src="https://img.icons8.com/material-two-tone/24/000000/x-coordinate.png"/>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -61,20 +61,6 @@
 
 <!------------ home and description ----------------->
 
-
-
-
-    <script>
-function openSlideMenu(){
-    document.getElementById('menu').style.width='250px';
-    // document.getElementById('content').style.marginLeft='250px'
-}
-function cloesSlideMenu(){
-    document.getElementById('menu').style.width='0';
-    // document.getElementById('content').style.marginLeft= '0'
-}
-
-    </script>
     <script src="./src/main.js" type="module"></script>
     <br>
     <a href="https://icons8.com/icon/12371/menu"></a>
