@@ -41,13 +41,23 @@
 
 
     <!----------- slider menu -------------------->
-
+    <div class="weather" id="weather">
+        <div class="weather-top" id="weather-top">
+            <div id="city"></div>
+            <div id="temp"></div>
+        </div>
+        <div class="filler"></div>
+        <div class="weather-bottom" id="weather-bottom">
+            <div class="greetTime"> 
+              <time id="time"></time>           
+                  <span id="greeting"></span> 
+                </div>
+    
+            <div id="humidity"></div>
+        </div>
+    </div>
     <div class="greetTime"> 
-        <time id="time"></time>
-        <h1>
-            <span id="greeting"></span>
-            <span id="name"></span>
-        </h1>
+       
     
         <h2>What Events are you looking for today?</h2>
         <h2 id="focus" contenteditable="true">Fitness Events Near Me</h2>
