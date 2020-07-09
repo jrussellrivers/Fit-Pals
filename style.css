@@ -7,8 +7,7 @@ html{
     height: 100%;
 }
 header{
-    background:rgb(209, 209, 54);
-    background-image: linear-gradient(yellow, lightgreen);
+    background-image:url("./img/bannerimg.jpg");
     font-family: "Russo One", "sans-serif";
     color: lightblue;
     padding:20px;
@@ -22,7 +21,6 @@ header{
     font-weight: bold;
     display: flex;
     justify-content: space-between;
-    opacity: 0.85;
     background-size: cover;
     
 }
@@ -43,6 +41,15 @@ body{
     letter-spacing: 1.5px;
     justify-content: center;
 }
+.image .list {
+    justify-content: center;
+    text-align: center;
+}
+li {
+    margin: 1em 0;
+    line-height: 2.5em;
+    letter-spacing: 2.8px;
+}
 .container {
     font-weight: bold;
     display: flex;
@@ -52,6 +59,9 @@ body{
     /* max-width: 1000px; */
     /* height: 600px */
     justify-content: center;
+}
+hr {
+    margin-bottom: 18px;
 }
 .field{
     background-color: lightgray;
@@ -147,11 +157,17 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: 10px;
-    border: solid black;
+    /* margin: 0px 20px; */
+    border: solid lightgray;
+    border-width: thin;
     min-width: 350px;
     background: white;
     background-size: cover;
+    border-left: 0px solid;
+    border-right: 0px solid;
+    max-width: 1200px;
+    margin: auto;
+    font-weight: bold;
 }
 .img-div img{
     max-height: 100px;
