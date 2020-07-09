@@ -213,3 +213,34 @@ hr {
     justify-content: center;
     overflow: hidden;
 }
+/* Weather elements */
+.weather {
+    background-color: #f1f1f1;
+    background: url("./img/atlBanner.jpg");
+    background-size: cover;
+    height: 225px;
+    margin: 10px;
+    font-size: 40px;
+    font-family: "Russo One", "sans-serif";
+    color: lightblue;
+    text-shadow: 2px 2px black;
+    font-weight: bold;
+    align-items: center;
+}
+.weather-top{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10px;
+}
+.weather-bottom{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    justify-content: space-between;
+    padding: 10px;
+}
+.filler{
+    padding: 20px;
+
+}
