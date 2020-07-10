@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id='html'>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -27,6 +27,17 @@
                         <li><a href="index.html">Home</a></li>
                         <li><a href="events.html" >Events</a></li>
                         <li><a href="contact.html">Contact</a></li>
+                        <li>
+                            <div class="dark-mode dark-div">
+                                <div>Dark Mode</div>
+                                <div class="dark-button">
+                                    <input type="checkbox" class="checkbox" id="chk" />
+                                    <label class="label" for="chk">
+                                        <div class="ball"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </li>
                     </ul>
                 </div>
                 <!-- <h2>Events</h2> -->
@@ -67,7 +78,7 @@
     </div>
 
 <!------------ home and description ----------------->
-
+    <script src="./src/weather.js"></script>
     <script src="./src/main.js" type="module"></script>
     <br>
     <a href="https://icons8.com/icon/12371/menu"></a>
