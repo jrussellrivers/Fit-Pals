@@ -54,9 +54,9 @@ Fit Pals is a dedicated search for physical events in the Atlanta area. By users
 - Functioning Calendar API
 
 ## Challenges & Solutions:
-### Challenge: Obtaining a proxy solution that would allow us to access the data from the API upon calling it, despite a CORS error.
-### Solution: Inserted proxy code before url to allow obtaining the information.
+### ***Challenge:*** Obtaining a proxy solution that would allow us to access the data from the API upon calling it, despite a CORS error.
+### ***Solution:*** Inserted proxy code before url to allow obtaining the information.
 
-### Challenge:
-### Solution: 
+### ***Challenge:***
+### ***Solution:*** 
 
