@@ -66,6 +66,33 @@ ___
 ### ***Solution:*** Experimenting with code structure to produce the correct output.
 
 ## Code Snippets:
+### Our main Javascript file displays the Slider Feature of the menu and Light/Dark mode code.
 
+function openSlideMenu(){
+    document.getElementById('menu').style.width='250px';
+    // document.getElementById('content').style.marginLeft='250px'
+}
+function closeSlideMenu(){
+    document.getElementById('menu').style.width='0';
+    // document.getElementById('content').style.marginLeft= '0'
+}
+
+let menuOpen = document.getElementById('menu-open')
+menuOpen.addEventListener('click', ()=>{
+    openSlideMenu()
+})
+
+let menuClose = document.getElementById('menu-close')
+menuClose.addEventListener('click', ()=>{
+    closeSlideMenu()
+})
+
+// -----------------------------------------------------
+
+const chk = document.getElementById('chk');
+chk.addEventListener('change', (cards) => {
+  document.body.classList.toggle('dark');
+  closeSlideMenu()
+});
 
 
