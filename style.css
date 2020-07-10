@@ -1,10 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Russo+One&display=swap');
 
-html{
+html, body {
+    margin: 0;
+    height: 100%;
+}
+body{
+    font-family: 'Catamaran', sans-serif;
     background: whitesmoke;
     background-size: cover;
-    width: 100%;
-    height: 100%;
+    transition: 0.2s linear;
 }
 header{
     background-image:url("./img/bannerimg.jpg");
@@ -140,6 +144,13 @@ hr {
 
     margin-left: 20px;
 }
+.dark-div{
+    color: #ccc;;
+}
+.dark-div:hover{
+    color: #fff;
+    transition: .5s;
+}
 .slide a {
     font-size: 36px;
     color: #2d3135;
@@ -163,7 +174,7 @@ hr {
     border: solid lightgray;
     border-width: thin;
     min-width: 350px;
-    background: white;
+    /* background: white; */
     background-size: cover;
     border-left: 0px solid;
     border-right: 0px solid;
@@ -244,4 +255,52 @@ hr {
 .filler{
     padding: 20px;
 
+}
+body.dark {
+    background: #292C35;
+    color: grey
+}
+body.dark a{
+    color: white;
+}
+.image.dark {
+    display: none;
+}
+.checkbox {
+	opacity: 0;
+	position: absolute;
+}
+.label {
+	background-color: #111;
+	border-radius: 50px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 16px;
+	width: 50px;
+    transform: scale(1.5);
+}
+.label .ball {
+	background-color: #fff;
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 22px;
+	width: 22px;
+	transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+.checkbox:checked + .label .ball {
+	transform: translateX(24px);
+}
+.dark-mode{
+    display: inline-block;
+}
+.dark-button{
+    padding-left: 45px;
+    padding-bottom: 28px;
 }
