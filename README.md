@@ -11,17 +11,17 @@ Fit Pals is a dedicated search for physical events in the Atlanta area. By users
 ### PJ Almeida
 
 ## What we used:
-###Languages:
+### Languages:
 - HTML5
 - CSS
 - JAVASCRIPT
 - JSON
 
-###APIs
+### APIs
 - Active.com Search
 - Open Weather Map
 
-###Other:
+### Other:
 - Favicon
 - Google Calendar
 - Light/Dark Mode
