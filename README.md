@@ -68,13 +68,13 @@ ___
 ## Code Snippets:
 ### Our main Javascript file displays the Slider Feature of the menu and Light/Dark mode code.
 ``` javascript
+
+//Code for Slider Mennu
 function openSlideMenu(){
     document.getElementById('menu').style.width='250px';
-    // document.getElementById('content').style.marginLeft='250px'
 }
 function closeSlideMenu(){
     document.getElementById('menu').style.width='0';
-    // document.getElementById('content').style.marginLeft= '0'
 }
 
 let menuOpen = document.getElementById('menu-open')
@@ -88,7 +88,7 @@ menuClose.addEventListener('click', ()=>{
 })
 
 // -----------------------------------------------------
-
+// Allows user to toggle button to change background color
 const chk = document.getElementById('chk');
 chk.addEventListener('change', (cards) => {
   document.body.classList.toggle('dark');
