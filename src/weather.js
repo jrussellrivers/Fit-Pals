@@ -37,7 +37,7 @@ function addZero(n) {
 showTime();
 
 
-fetch('http://api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=b4c3257cf7170d0a36310439f13ba240')
+fetch('http://api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=6a899e0702d3b935e5d01d1b77ea6d59')
 .then(resp=>resp.json())
 .then(json=>{
     let city = json.name
