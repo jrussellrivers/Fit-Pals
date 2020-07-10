@@ -56,7 +56,16 @@ Fit Pals is a dedicated search for physical events in the Atlanta area. By users
 ## Challenges & Solutions:
 ### ***Challenge:*** Obtaining a proxy solution that would allow us to access the data from the API upon calling it, despite a CORS error.
 ### ***Solution:*** Inserted proxy code before url to allow obtaining the information.
+___
+### ***Challenge:*** Creating a media responsive website for all formats.
 
-### ***Challenge:***
-### ***Solution:*** 
+### ***Solution:*** Reading documentation, trial and eror. The website is viewable across any medium: computer, tablet or smart phone.
+___
+### ***Challenge:*** Correctly implementing other API's and functions to create an informative and active page.
+
+### ***Solution:*** Experimenting with code structure to produce the correct output.
+
+## Code Snippets:
+
+
 
