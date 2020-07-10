@@ -67,7 +67,7 @@ ___
 
 ## Code Snippets:
 ### Our main Javascript file displays the Slider Feature of the menu and Light/Dark mode code.
-
+``` javascript
 function openSlideMenu(){
     document.getElementById('menu').style.width='250px';
     // document.getElementById('content').style.marginLeft='250px'
@@ -94,5 +94,5 @@ chk.addEventListener('change', (cards) => {
   document.body.classList.toggle('dark');
   closeSlideMenu()
 });
-
+```
 
