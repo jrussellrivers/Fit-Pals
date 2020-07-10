@@ -12,20 +12,20 @@ Fit Pals is a dedicated search for physical events in the Atlanta area. By users
 
 ## What we used:
 ###Languages:
-*HTML5
-*CSS
-*JAVASCRIPT
-*JSON
+- HTML5
+- CSS
+- JAVASCRIPT
+- JSON
 
 ###APIs
-*Active.com Search
-*Open Weather Map
+- Active.com Search
+- Open Weather Map
 
 ###Other:
-*Favicon
-*Google Calendar
-*Light/Dark Mode
-*Slider Menu
-*Query Search
+- Favicon
+- Google Calendar
+- Light/Dark Mode
+- Slider Menu
+- Query Search
 
 
