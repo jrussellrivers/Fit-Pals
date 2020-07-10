@@ -347,3 +347,15 @@ body.dark a{
     font-weight: bolder;
     font-size: 25px;
 }
+/* footer return to top */
+
+.footerText{
+    display: flex;
+    justify-content: center;
+    color: black;
+    font-family: "Russo One", "sans-serif";
+    color: lightblue;
+    height: 30px;
+    align-items: center;
+    margin: 20px;
+}
