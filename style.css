@@ -280,7 +280,7 @@ body.dark a{
 	padding: 5px;
 	position: relative;
 	height: 16px;
-	width: 50px;
+	width: 40px;
     transform: scale(1.5);
 }
 .label .ball {
@@ -301,7 +301,7 @@ body.dark a{
     display: inline-block;
 }
 .dark-button{
-    padding-left: 45px;
+    padding-left: 50px;
     padding-bottom: 28px;
 }
 
@@ -320,4 +320,30 @@ body.dark a{
     margin: 0;
     padding: 0;
     text-align: center;
+}
+.author-list{
+    list-style-type: none;
+}
+.author{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+.author img{
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    margin: auto;
+    position: relative;
+    text-align: center;
+}
+.author-info{
+    display: inline-block;
+    font-size: 19px;
+    margin: 20px;
+}
+.authorNames{
+    font-weight: bolder;
+    font-size: 25px;
 }
