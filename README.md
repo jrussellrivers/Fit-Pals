@@ -69,7 +69,7 @@ ___
 ### Our main Javascript file displays the Slider Feature of the menu and Light/Dark mode code.
 ``` javascript
 
-//Code for Slider Mennu
+//Code for Slider Menu
 function openSlideMenu(){
     document.getElementById('menu').style.width='250px';
 }
@@ -94,5 +94,36 @@ chk.addEventListener('change', (cards) => {
   document.body.classList.toggle('dark');
   closeSlideMenu()
 });
+```
+
+``` javascript
+ //Allows user to search based on query 
+import startSearch from './startSearch.js'
+import nextPage from './nextPage.js'
+
+let page = 1
+
+let submitSearch = document.getElementById('Search')
+submitSearch.addEventListener('click', ()=>{
+    let inpActivity = document.getElementById('inpActivity').value
+    let inpRadius = document.getElementById('inpRadius').value
+    let inpDate = document.getElementById('inpDate').value
+    let continuousDate = inpDate + '..'
+    page = 1
+
+    return startSearch(inpActivity, page, continuousDate, inpRadius)
+})
+
+let nextButton = document.getElementById('next')
+nextButton.addEventListener('click', ()=>{
+    page += 1
+
+    let inpActivity = document.getElementById('inpActivity').value
+    let inpRadius = document.getElementById('inpRadius').value
+    let inpDate = document.getElementById('inpDate').value
+    let continuousDate = inpDate + '..'
+
+    nextPage(inpActivity, page, continuousDate, inpRadius)
+})
 ```
 
