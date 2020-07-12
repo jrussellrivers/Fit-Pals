@@ -203,5 +203,6 @@ fetch('http://api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=6a899e0702
 })
 ```
 ## Demo of search feature
-<iframe width="560" height="315" src="https://www.youtube.com/embed/W_FmXOzzQYU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Fit Pals demo](http://img.youtube.com/vi/W_FmXOzzQYU/0.jpg)](https://youtu.be/W_FmXOzzQYU)
+
 
