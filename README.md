@@ -60,7 +60,7 @@ Fit Pals is a dedicated search for physical events in the Atlanta area. By users
 ___
 ### ***Challenge:*** Creating a media responsive website for all formats.
 
-### ***Solution:*** Reading documentation, trial and eror. The website is viewable across any medium: computer, tablet or smart phone.
+### ***Solution:*** Reading documentation, trial and error. The website is viewable across any medium: computer, tablet or smart phone.
 ___
 ### ***Challenge:*** Correctly implementing other API's and functions to create an informative and active page.
 
