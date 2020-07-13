@@ -25,3 +25,4 @@ nextButton.addEventListener('click', ()=>{
 
     nextPage(inpActivity, page, continuousDate, inpRadius)
 })
+nextButton.disabled = true
