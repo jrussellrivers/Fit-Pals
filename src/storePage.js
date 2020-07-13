@@ -8,6 +8,11 @@ function storePage(activity, page, date, radius){
     .then(resp=>resp.json())
     .then(json=>{
         // localStorage.setItem('events',JSON.stringify(json.results))
+        if (json.results.length == 0){
+            let nextButton = document.getElementById('next')
+            nextButton.disabled = true
+            nextButton.innerText = 'No More Pages'
+        }
         fillPage(json.results)
     })
 
