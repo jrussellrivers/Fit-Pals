@@ -1,7 +1,7 @@
 # Fit Pals
 ![rmbanner](https://user-images.githubusercontent.com/63179764/87181998-47556480-c2b1-11ea-98f7-b886a0f5f031.jpg)
 ## Overview: 
-Fit Pals is a dedicated search for physical events in the Atlanta area. By users querying their search, they may return up-to-date events in which to participate in either solo, with loved ones or to meet new friends.
+Fit Pals is a dedicated search for physical events in the Atlanta area. By users querying their search, they may return up-to-date events in which to participate in either solo, with loved ones or to meet new friends. Each search returns events, in your area, on the date and for events thereafter.
 
 ## The Team:
 ### Jordan Rivers: https://github.com/jrussellrivers
@@ -51,6 +51,7 @@ Fit Pals is a dedicated search for physical events in the Atlanta area. By users
 
 ## Stretch Goals Future
 - Allowing users to create personal profiles and connect with others attending the same events
+- Expand city and activities search to include more metros and events to choose from 
 - Functioning Calendar API
 
 ## Challenges & Solutions:
