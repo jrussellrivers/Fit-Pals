@@ -37,7 +37,7 @@ function addZero(n) {
 showTime();
 
 
-fetch('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=6a899e0702d3b935e5d01d1b77ea6d59')
+fetch('https://cors-anywhere.herokuapp.com/http://api.openweathermap.org/data/2.5/weather?q=Atlanta&appid=c83b165993a31dceb97ea4218a5a17f8')
 .then(resp=>resp.json())
 .then(json=>{
     let city = json.name
